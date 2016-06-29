@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-*",
+  "version": "0.2.0-*",
   "title": "SparkPostDotNet",
   "copyright": "William Roush 2016",
   "description": "SparkPost Integration for .NET Core",
