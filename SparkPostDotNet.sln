@@ -8,6 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3FFEA844-A3C0-4641-934F-8336547341F6}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		LICENSE.txt = LICENSE.txt
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SparkPostDotNet", "src\SparkPostDotNet\SparkPostDotNet.xproj", "{4B79FA65-2693-40DD-B62B-6D0D9C04F949}"
