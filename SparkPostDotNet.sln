@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{20C96100-5042-420C-8E6C-87B9E73F8065}"
 EndProject
@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SparkPostDotNet", "src\SparkPostDotNet\SparkPostDotNet.xproj", "{4B79FA65-2693-40DD-B62B-6D0D9C04F949}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D8E8D23B-DD0E-42C0-89D6-C99B2BF41858}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SparkPostDotNet.Tests", "test\SparkPostDotNet.Tests\SparkPostDotNet.Tests.xproj", "{B8CA83D0-E013-4B75-AE27-C3DF5A61A245}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,11 +28,16 @@ Global
 		{4B79FA65-2693-40DD-B62B-6D0D9C04F949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B79FA65-2693-40DD-B62B-6D0D9C04F949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B79FA65-2693-40DD-B62B-6D0D9C04F949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8CA83D0-E013-4B75-AE27-C3DF5A61A245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CA83D0-E013-4B75-AE27-C3DF5A61A245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CA83D0-E013-4B75-AE27-C3DF5A61A245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CA83D0-E013-4B75-AE27-C3DF5A61A245}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4B79FA65-2693-40DD-B62B-6D0D9C04F949} = {20C96100-5042-420C-8E6C-87B9E73F8065}
+		{B8CA83D0-E013-4B75-AE27-C3DF5A61A245} = {D8E8D23B-DD0E-42C0-89D6-C99B2BF41858}
 	EndGlobalSection
 EndGlobal
