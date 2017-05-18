@@ -11,6 +11,21 @@ Place the following in your Startup.ConfigureServices section:
 services.AddSparkPost();
 ```
 
+Hook up the configuration using the following code:
+
+``` csharp
+services.AddOptions(); // Most apps already are using this, but just in case.
+services.Configure<SparkPostOptions>(options => Configuration.GetSection("SparkPost").Bind(options));
+```
+
+Configure SparkPost from your appSettings.json file like so:
+
+``` javascript
+  "SparkPost": {
+    "ApiKey": "[Api key here]"
+  }
+```
+
 # Sending an e-mail
 
 ``` csharp
@@ -24,3 +39,10 @@ recipient.Address.EMail = "recipient@mydomain.com";
 transmission.Recipients.Add(recipient);
 await this.SparkPostClient.CreateTransmission(transmission);
 ```
+
+# Testing
+
+You'll need to configure the following environment variables:
+
+ * SPARKPOST_APIKEY - SparkPost API key for testing.
+ * SPARKPOST_SENDINGDOMAIN - Domain we're sending from/to.
