@@ -32,5 +32,8 @@
 
         [JsonProperty("inline_images")]
         public IList<Attachment> InlineImages { get; set; }
+
+        [JsonProperty("template_id")]
+        public string TemplateId { get; set; }
     }
 }

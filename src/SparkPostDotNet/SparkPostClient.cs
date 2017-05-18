@@ -3,24 +3,23 @@
     using System;
     using System.Net.Http;
     using System.Threading.Tasks;
-    using Microsoft.Extensions.Configuration;
     using Transmissions;
+    using Microsoft.Extensions.Options;
 
     public class SparkPostClient
     {
-        public SparkPostClient(IConfigurationRoot configuration)
+        public SparkPostClient(IOptions<SparkPostOptions> options)
         {
-            this.Configuration = configuration;
+            this.Options = options.Value;
         }
 
-        protected IConfigurationRoot Configuration { get; set; }
+        protected SparkPostOptions Options { get; set; }
 
         protected Uri SparkPoostUri {  get { return new Uri("https://api.sparkpost.com/api/v1/transmissions"); } }
 
         public async Task CreateTransmission(Transmission transmission)
         {
-            var apiKey = this.Configuration["SparkPost:ApiKey"];
-            if (string.IsNullOrEmpty(apiKey))
+            if (string.IsNullOrEmpty(this.Options.ApiKey))
             {
                 throw new InvalidOperationException("Configuration variable SparkPost:ApiKey must be set.");
             }
@@ -29,7 +28,7 @@
             {
                 transmission.Headers.Clear();
                 transmission.Headers.Add("Content-Type", "application/json");
-                httpClient.DefaultRequestHeaders.Add("Authorization", apiKey);
+                httpClient.DefaultRequestHeaders.Add("Authorization", this.Options.ApiKey);
                 var response = await httpClient.PostAsync(this.SparkPoostUri, transmission);
                 if(!response.IsSuccessStatusCode)
                 {
