@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <Description>SparkPost Integration for .NET Core</Description>
-    <Copyright>William Roush 2016</Copyright>
+    <Copyright>William Roush 2016-2017</Copyright>
     <AssemblyTitle>SparkPostDotNet</AssemblyTitle>
-    <VersionPrefix>0.2.0</VersionPrefix>
+    <VersionPrefix>0.2.1</VersionPrefix>
     <Authors>William Roush</Authors>
     <TargetFramework>netstandard1.5</TargetFramework>
     <AssemblyName>SparkPostDotNet</AssemblyName>
