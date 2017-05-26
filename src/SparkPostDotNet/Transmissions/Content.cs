@@ -24,6 +24,9 @@
         [JsonProperty("from")]
         public Address From { get; set; }
 
+        [JsonProperty("reply_to")]
+        public string ReplyTo { get; set; }
+
         [JsonProperty("headers")]
         public object Headers { get; set; }
 
