@@ -4,19 +4,18 @@
     <Description>SparkPost Integration for .NET Core</Description>
     <Copyright>William Roush 2016-2017</Copyright>
     <AssemblyTitle>SparkPostDotNet</AssemblyTitle>
-    <VersionPrefix>0.2.1</VersionPrefix>
+    <VersionPrefix>0.2.2</VersionPrefix>
     <Authors>William Roush</Authors>
-    <TargetFramework>netstandard1.5</TargetFramework>
     <AssemblyName>SparkPostDotNet</AssemblyName>
     <PackageId>SparkPostDotNet</PackageId>
     <PackageTags>SparkPost;Core;Mail</PackageTags>
     <PackageProjectUrl>https://github.com/RoushTech/SparkPostDotNet</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/RoushTech/SparkPostDotNet/blob/master/LICENSE.txt</PackageLicenseUrl>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6</PackageTargetFallback>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <TargetFrameworks>netstandard1.5</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{20C96100-5042-420C-8E6C-87B9E73F8065}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3FFEA844-A3C0-4641-934F-8336547341F6}"
 	ProjectSection(SolutionItems) = preProject
+		Changelog.md = Changelog.md
 		LICENSE.txt = LICENSE.txt
 		Readme.md = Readme.md
 	EndProjectSection
@@ -38,5 +39,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4B79FA65-2693-40DD-B62B-6D0D9C04F949} = {20C96100-5042-420C-8E6C-87B9E73F8065}
 		{B8CA83D0-E013-4B75-AE27-C3DF5A61A245} = {D8E8D23B-DD0E-42C0-89D6-C99B2BF41858}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBE31F5A-F7EA-4C2E-8FB2-A1D9A098306D}
 	EndGlobalSection
 EndGlobal
