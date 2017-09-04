@@ -15,7 +15,7 @@
 
         protected SparkPostOptions Options { get; set; }
 
-        protected Uri SparkPoostUri {  get { return new Uri("https://api.sparkpost.com/api/v1/transmissions"); } }
+        protected Uri SparkPostUri {  get { return new Uri("https://api.sparkpost.com/api/v1/transmissions"); } }
 
         public async Task CreateTransmission(Transmission transmission)
         {
@@ -29,7 +29,7 @@
                 transmission.Headers.Clear();
                 transmission.Headers.Add("Content-Type", "application/json");
                 httpClient.DefaultRequestHeaders.Add("Authorization", this.Options.ApiKey);
-                var response = await httpClient.PostAsync(this.SparkPoostUri, transmission);
+                var response = await httpClient.PostAsync(this.SparkPostUri, transmission);
                 if(!response.IsSuccessStatusCode)
                 {
                     throw new Exception(await response.Content.ReadAsStringAsync());
