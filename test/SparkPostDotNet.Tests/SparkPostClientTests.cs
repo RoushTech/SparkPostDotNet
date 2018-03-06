@@ -1,20 +1,20 @@
 ﻿namespace SparkPostDotNet.Tests
 {
-    using SparkPostDotNet.Transmissions;
     using System;
     using System.Threading.Tasks;
+    using Transmissions;
     using Xunit;
+    using Options = Microsoft.Extensions.Options.Options;
 
     public class SparkPostClientTests
     {
         public SparkPostClientTests()
         {
-            
             var options = new SparkPostOptions
             {
                 ApiKey = Environment.GetEnvironmentVariable("SPARKPOST_APIKEY")
             };
-            this.Client = new SparkPostClient(Microsoft.Extensions.Options.Options.Create(options));
+            this.Client = new SparkPostClient(Options.Create(options));
             this.SendingDomain = Environment.GetEnvironmentVariable("SPARKPOST_SENDINGDOMAIN");
         }
 

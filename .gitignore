@@ -4,3 +4,4 @@ src/SparkPostDotNet/bin/
 *.lock.json
 test/SparkPostDotNet.Tests/bin/
 test/SparkPostDotNet.Tests/obj/
+.idea/

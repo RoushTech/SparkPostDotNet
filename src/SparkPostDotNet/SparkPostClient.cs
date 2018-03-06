@@ -3,21 +3,22 @@
     using System;
     using System.Net.Http;
     using System.Threading.Tasks;
-    using Transmissions;
     using Microsoft.Extensions.Options;
+    using Transmissions;
 
     public class SparkPostClient
     {
+        private const string DefaultUri = "https://api.sparkpost.com/api/v1/transmissions";
+
+        protected SparkPostOptions Options { get; }
+
+        protected Uri SparkPostUri =>
+            new Uri(string.IsNullOrEmpty(this.Options.ApiHostUri) ? DefaultUri : this.Options.ApiHostUri);
+
         public SparkPostClient(IOptions<SparkPostOptions> options)
         {
             this.Options = options.Value;
         }
-
-        private const string DEFAULT_URI = "https://api.sparkpost.com/api/v1/transmissions";
-
-        protected SparkPostOptions Options { get; }
-
-        protected Uri SparkPostUri => new Uri(string.IsNullOrEmpty(this.Options.ApiHostUri) ? DEFAULT_URI : this.Options.ApiHostUri);
 
         public async Task CreateTransmission(Transmission transmission)
         {

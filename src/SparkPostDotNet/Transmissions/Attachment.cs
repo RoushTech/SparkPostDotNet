@@ -1,20 +1,20 @@
 ﻿namespace SparkPostDotNet.Transmissions
 {
-    using Newtonsoft.Json;
     using System;
+    using Newtonsoft.Json;
 
     [JsonObject(MemberSerialization.OptIn)]
     public class Attachment
     {
-        [JsonProperty("type")]
-        public string Type { get; set; }
+        public byte[] Data { get; set; }
+
+        [JsonProperty("data")]
+        public string DataString => Convert.ToBase64String(this.Data);
 
         [JsonProperty("name")]
         public string Name { get; set; }
 
-        [JsonProperty("data")]
-        public string DataString { get { return Convert.ToBase64String(this.Data); } }
-
-        public byte[] Data { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
     }
 }

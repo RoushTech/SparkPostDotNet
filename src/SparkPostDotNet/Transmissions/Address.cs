@@ -4,10 +4,10 @@
 
     public class Address
     {
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
         [JsonProperty("email")]
         public string EMail { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
     }
 }
