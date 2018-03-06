@@ -1,21 +1,20 @@
-﻿using System.Collections.Generic;
-
-namespace SparkPostDotNet.Transmissions
+﻿namespace SparkPostDotNet.Transmissions
 {
+    using System.Collections.Generic;
     using Newtonsoft.Json;
 
     [JsonObject(MemberSerialization.OptOut)]
     public class Recipient
     {
-        public Recipient()
-        {
-            this.Address = new Address();
-        }
-
         [JsonProperty("address")]
         public Address Address { get; set; }
 
         [JsonProperty("substitution_data")]
         public Dictionary<string, object> SubstitutionData { get; set; }
+
+        public Recipient()
+        {
+            this.Address = new Address();
+        }
     }
 }
