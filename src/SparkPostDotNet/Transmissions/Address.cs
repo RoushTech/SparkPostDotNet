@@ -9,5 +9,8 @@
 
         [JsonProperty("name")]
         public string Name { get; set; }
+        
+        [JsonProperty("header_to")]
+        public string HeaderTo { get; set; }
     }
 }
